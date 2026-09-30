@@ -1,13 +1,52 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main{
+    static void main() {
+//        try(InputStreamReader isr = new InputStreamReader(System.in)){
+//            System.out.print("Enter Some letters:");
+//            int letters = isr.read();
+//            while (isr.ready()){
+//                System.out.println((char) letters);
+//                letters = isr.read();
+//            }
+//            isr.close();
+//            System.out.println();
+//        }catch (IOException e){
+//            System.out.println(e.getMessage());
+//        }
+        //File Reader Example
+        try(FileReader fr = new FileReader("E:\\WorkSpace\\JavaKK\\io-streams\\src\\notes.txt")){
+
+            int letters = fr.read();
+            while (fr.ready()){
+                System.out.println((char) letters);
+                letters = fr.read();
+            }
+
+            System.out.println();
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
+
+        //byte to char stream and then reading char stream
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in));){
+            System.out.println("You typed: " + br.readLine());
+        }
+        catch (IOException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        try(BufferedReader br = new BufferedReader(new FileReader("E:\\WorkSpace\\JavaKK\\io-streams\\src\\notes.txt"))){
+            while (br.ready()){
+                System.out.println(br.readLine());
+            }
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
