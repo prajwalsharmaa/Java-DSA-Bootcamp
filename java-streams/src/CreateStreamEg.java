@@ -42,5 +42,14 @@ public class CreateStreamEg {
         // Create a stream from Map's values
         Stream<Integer> mapValuesStream = fruitMap.values().stream();
         mapValuesStream.forEach(System.out::println);
+
+        // Create a stream from an Array
+        String[] array = {"Banana","Mango","Apple"};
+        Stream<String> arrayStream = Arrays.stream(array);
+        arrayStream.forEach(System.out::println);
+
+        // Create a stream using Stream.of() method i.e without collection or array
+        Stream<String> ofStream = Stream.of("Apple","Banana","Mango");
+        ofStream.forEach(System.out::println);
     }
 }
