@@ -7,6 +7,7 @@ public class Comparison {
 
 
 
+
         // ==
 
         System.out.println(a==b);//true because it points to same object
