@@ -1,0 +1,3 @@
+Rules:
+1.Use the outer loop for the number of rows
+2.Identify for every row number how many columns are there or types of elements in the column
