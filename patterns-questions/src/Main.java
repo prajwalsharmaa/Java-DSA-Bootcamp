@@ -13,7 +13,7 @@ public class Main{
                 System.out.print(" ");
             }
             //for every row, run the col
-            for (int j = 1; j <=i; j++) {
+            for (int j = 1; j <=2*i-1; j++) {
 
                 System.out.print("*");
             }
