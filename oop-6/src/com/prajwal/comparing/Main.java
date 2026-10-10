@@ -1,4 +1,4 @@
-package com.prajwal.generics.comparing;
+package com.prajwal.comparing;
 
 import java.util.Arrays;
 

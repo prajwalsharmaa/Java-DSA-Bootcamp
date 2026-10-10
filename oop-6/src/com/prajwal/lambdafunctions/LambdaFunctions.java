@@ -1,4 +1,4 @@
-package com.prajwal.generics.lambdafunctions;
+package com.prajwal.lambdafunctions;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -39,6 +39,7 @@ public class LambdaFunctions {
         return a + b;
     }
 }
+//these interfaces are functional interfaces
 interface  Operation{
     int operation(int a,int b);
 }
