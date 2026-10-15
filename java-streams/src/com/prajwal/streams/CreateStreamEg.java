@@ -1,3 +1,5 @@
+package com.prajwal.streams;
+
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -49,7 +51,15 @@ public class CreateStreamEg {
         arrayStream.forEach(System.out::println);
 
         // Create a stream using Stream.of() method i.e without collection or array
-        Stream<String> ofStream = Stream.of("Apple","Banana","Mango");
-        ofStream.forEach(System.out::println);
+        Stream<String> ofStream = Stream.of("Rabbit","Banana","Mango");
+        ofStream.forEach(str -> System.out.println(str));
+//
+//        ArrayList<String> names = new ArrayList<>();
+//        names.add("Prajwal");
+//        names.add("Prajwal");
+//        names.add("Prajwal");
+//        names.add("Prajwal");
+//
+//        names.forEach(System.out::println);
     }
 }
